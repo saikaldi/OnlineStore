@@ -1,0 +1,24 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+
+
+{% block css %}
+    <link rel="stylesheet" href="deps/css/my_footer_css.css">
+{% endblock %}
+
+{% block content %}
+    <div class="my-5 pt-5 px-2 pb-2 bg-white custom-shadow rounded">
+    <h2 class="m-2"><strong>{{title}}</strong></h2>
+    <p class="m-2" style="font-size: 1.2rem;">{{text}}</p>
+</div>
+{% endblock %}
+
+
+{% block foooter %}
+    <footer class="py-4 bg-secondary">
+        <div class="container">
+            <p class="m-0 text-center text-white ">Copyright &copy; LuxeStore Python 2024</p>
+        </div>
+    </footer>
+{% endblock %}
