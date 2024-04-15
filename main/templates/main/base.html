@@ -85,13 +85,13 @@
                             height="16">
                     </button>
                     <ul class="dropdown-menu bg-secondary" data-bs-theme="dark">
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">All products</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Clothing & Apparel</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Glasses</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Bags</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">PhoneCases & IpadCases</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Shoes</a></li>
-                        <li><a class="dropdown-item text-white" href="goods/catalog.html">Office Supplies & Decor</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">All products</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Clothing & Apparel</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Glasses</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Bags</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">PhoneCases & IpadCases</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Shoes</a></li>
+                        <li><a class="dropdown-item text-white" href="{% url 'catalog:index' %}">Office Supplies & Decor</a></li>
                     </ul>
                 </div>
                 <!-- Cart icon, opens a modal window -->

@@ -1,0 +1,358 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <!-- Filter form -->
+        <div class="dropdown mb-2">
+            <button class="btn btn-secondary dropdown-toggle btn-secondary" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Filters
+            </button>
+
+            <form action="" method="get" class="dropdown-menu bg-secondary" data-bs-theme="secondary">
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
+                    <input type="hidden" name="q" value="request.GET.q">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Promotional products
+                    </label>
+                </div>
+                <p class="text-white mx-3 mt-3">Sort:</p>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault1" value="default" checked>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        By default
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault2" value="price">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        From cheap to expensive
+                    </label>
+                </div>
+                <div class="form-check text-white mx-3">
+                    <input class="form-check-input" type="radio" name="order_by" id="flexRadioDefault3" value="-price">
+                    <label class="form-check-label" for="flexRadioDefault3">
+                        From expensive to cheap
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary mx-3 mt-3">Apply</button>
+            </form>
+        </div>
+        <!-- Product card -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/dress1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="{% url 'goods:product' %}">
+                        <p class="card-title">T-Shirt</p>
+                    </a>
+                    <p class="card-text text-truncate">A white T-shirt is a classic wardrobe essential, offering comfort and versatility.
+                    </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn add-to-cart">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/ipad-case2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">Ipad Case</p>
+                    </a>
+                    <p class="card-text text-truncate">
+                    Introducing the sleek and functional iPad case, designed to provide both style and protection for your device.
+                    </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn add-to-cart">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/bag-1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">Girl's super bag</p>
+                    </a>
+                    <p class="card-text text-truncate">The stylish and versatile bag designed to meet all your needs.
+                    </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/bag-3.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">"Blush Blossom" Pink Bag</p>
+                    </a>
+                    <p class="card-text text-truncate">Elevate your style with our chic pink bag,
+                    a sophisticated accessory that adds a touch of glamour to any outfit.  </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/shoes-1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">Shoes</p>
+                    </a>
+                    <p class="card-text text-truncate">White Shoes for Girls:
+                    Crafted with care from pristine white materials, these shoes are pure elegance. </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/bag-2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">White bag</p>
+                    </a>
+                    <p class="card-text text-truncate">This chic accessory embodies sophistication and versatility.
+                    </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/shoes-2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">"Swan Fluff" - shoes</p>
+                    </a>
+                    <p class="card-text text-truncate">"Swan Fluff" - adorable little shoes for girls:
+                    These delicate shoes boast an elegant design and an appealing look.
+                     </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/glass1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">"Crystal Clear" Glasses</p>
+                    </a>
+                    <p class="card-text text-truncate">These stylish glasses are both chic and practical. </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/dress2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">"Pink Serenade" Dress</p>
+                    </a>
+                    <p class="card-text text-truncate">This enchanting dress is a symphony of elegance and charm.
+                    </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/glass2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">Black-glass</p>
+                    </a>
+                    <p class="card-text text-truncate">These sophisticated glasses exude timeless style and versatility.
+                    </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/dress3.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">White-dress</p>
+                    </a>
+                    <p class="card-text text-truncate">This stunning white dress embodies elegance and grace. </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Product card  -->
+        <div class="col-lg-4 col-md-6 p-4">
+            <div class="card border-primary rounded custom-shadow">
+                <img src="{% static 'deps/images/goods/ipad-case1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <a href="#">
+                        <p class="card-title">Green phone case</p>
+                    </a>
+                    <p class="card-text text-truncate">Elevate your phone's style with our vibrant green case. </p>
+                    <p class="product_id">id: 02265</p>
+                    <div class="d-flex justify-content-between">
+                        <p><s>100</s> $</p>
+                        <p><strong>90.00 $</strong></p>
+                        <span class="badge bg-warning text-dark">Discount 10.00 %</span>
+                        <!-- <p><strong>100.00 $</strong></p> -->
+                        <a href="#" class="btn">
+                            <img class="mx-1" src="{% static 'deps/icons/cart-plus.svg' %}" alt="Catalog Icon"
+                                width="32" height="32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center my-4">
+            <div class="custom-shadow d-flex">
+                <li class="page-item disabled">
+                  <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+            </div>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block footer %}
+    <footer class="py-4 bg-secondary">
+        <div class="container">
+            <p class="m-0 text-center text-white ">Copyright &copy; LuxeStore Python 2024</p>
+        </div>
+    </footer>
+{% endblock %}
