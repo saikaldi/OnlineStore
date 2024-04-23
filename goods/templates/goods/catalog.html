@@ -10,7 +10,7 @@
                 Filters
             </button>
 
-            <form action="" method="get" class="dropdown-menu bg-secondary" data-bs-theme="secondary">
+            <form action="" method="get" class="dropdown-menu bg-secondary" data-bs-theme="dark">
                 <div class="form-check text-white mx-3">
                     <input class="form-check-input" type="checkbox" name="on_sale" id="flexCheckDefault" value="on">
                     <input type="hidden" name="q" value="request.GET.q">
@@ -49,10 +49,10 @@
             {% if product.images %}
                 <img src="{{product.image.url }}" class="card-img-top" alt="...">
             {% else %}
-                <img src="{% static "deps/images/Not found image.png" %}" class="card-img-top" alt="{{ product.name  }}">
+                <img src="{% static 'deps/images/Not found image.png' %}" class="card-img-top" alt="{{ product.name  }}">
             {% endif %}
                 <div class="card-body">
-                    <a href="#">
+                    <a href="{% url 'catalog:product' product.slug %}">
                         <p class="card-title">{{ product.name }}</p>
                     </a>
                     <p class="card-text text-truncate">{{ product.description }}</p>

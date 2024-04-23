@@ -5,7 +5,7 @@ from goods.models import Categories, Products
 
 @admin.register(Categories)
 class CategoryAdmin(admin.ModelAdmin):
-    prepopulated_fields = {"slug": ("name",)}
+    prepopulated_fields = {"slug": ("name",)} #to fill   automatically
 
 @admin.register(Products)
 class ProductsAdmin(admin.ModelAdmin):

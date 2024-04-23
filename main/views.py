@@ -3,7 +3,7 @@ from goods.models import Categories
 # Create your views here.
 
 def index(request):
-    # categories = Categories.objects.all()
+    categories = Categories.objects.all()
     context = {
         'title': 'Home',
         'content': 'Welcome to home page',
