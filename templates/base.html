@@ -39,14 +39,14 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item  text-white" href="#">Delivery and Payment</a></li>
                                 <li><a class="dropdown-item  text-white" href="#">Contact</a></li>
-                                <li><a class="dropdown-item  text-white" href="{% url 'main:about' %}">About</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url 'user:login' %}">About</a></li>
                             </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link  fw-bold text-secondary" href="carts/cart.html">Cart</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  fw-bold text-secondary" href="users/login.html">Login</a>
+                            <a class="nav-link  fw-bold text-secondary" href="{% url 'users:login' %}">Login</a>
                         </li>
                         <li class="nav-item dropdown ">
                             <a class="nav-link dropdown-toggle fw-bold text-secondary" href="#" role="button"
@@ -55,13 +55,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item  text-white" href="carts/cart.html">Cart</a></li>
-                                <li><a class="dropdown-item  text-white" href="users/profile.html">Personal Area</a>
+                                <li><a class="dropdown-item  text-white" href="{% url 'users:profile' %}">Personal Area</a>
                                 </li>
                                 <li><a class="dropdown-item  text-white" href="{% url 'admin:index' %}">Admin Panel</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item  text-white" href="#">Logout</a></li>
+                                <li><a class="dropdown-item  text-white" href="{% url 'users:logout' %}">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
